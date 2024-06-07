@@ -1,0 +1,15 @@
+{
+  "name": "binary-search-tree",
+  "version": "1.0.0",
+  "description": "This is the binary search trees project as described [here](https://www.theodinproject.com/lessons/javascript-binary-search-trees) as a part of [The Odin Project](https://www.theodinproject.com/) curriculum.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.3"
+  }
+}
