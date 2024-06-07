@@ -1,5 +1,7 @@
 export class Node{
-  constructor(){
-    this.message = "node created";
+  constructor(data){
+    this.data = data;
+    this.left = null;
+    this.right = null;
   }
 }

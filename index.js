@@ -5,7 +5,7 @@ import { buildTree } from "./modules/build-tree.js";
 const T = new Tree();
 console.log(T.message);
 
-const N = new Node();
-console.log(N.message);
+const N = new Node("data");
+console.log(N.data);
 
 buildTree();
