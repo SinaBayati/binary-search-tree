@@ -1,3 +1,3 @@
-export function buildTree(){
-  console.log("build tree function");
+export function buildTree(array){
+  return "tree: " + array;
 }

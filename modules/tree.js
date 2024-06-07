@@ -1,5 +1,7 @@
+import { buildTree } from './build-tree.js';
+
 export class Tree{
-  constructor(){
-    this.message = "tree created";
+  constructor(array){
+    this.root = buildTree(array);
   }
 }
