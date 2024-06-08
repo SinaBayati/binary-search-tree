@@ -15,4 +15,5 @@ const prettyPrint = (node, prefix = "", isLeft = true) => {
 
 const T = new Tree([1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]);
 // console.log(T.root);
-console.log(prettyPrint(T.root));
+T.insert(69);
+prettyPrint(T.root);
