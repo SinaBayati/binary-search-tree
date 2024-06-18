@@ -12,5 +12,4 @@ T.prettyPrint();
 // console.log(T.preOrder((x) => x.data));
 // console.log(T.postOrder((x) => x.data));
 // console.log(T.height());
-
-console.log(T.depth());
+console.log(T.isBalanced());

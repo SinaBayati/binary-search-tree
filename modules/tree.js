@@ -166,8 +166,20 @@ export class Tree{
     return level;
   }
 
-  isBalanced(){
+  isBalanced(root = this.root){
+    if(root === null){
+      return true;
+    }
 
+    const heightDiff = Math.abs(
+      this.height(root.left) - this.height(root.right)
+    );
+
+    return (
+      heightDiff <= 1
+      && this.isBalanced(root.left)
+      && this.isBalanced(root.right)
+    );
   }
 
   rebalance(){
