@@ -148,4 +148,29 @@ export class Tree{
     const rightHeight = this.height(root.right);
     return Math.max(leftHeight,rightHeight) + 1;
   }
+
+  depth(key,root = this.root){
+    let level = 0;
+
+    while(key !== root.data){
+      if(key < root.data){
+        level += 1;
+        root = root.left;
+      }
+      if(key > root.data){
+        level += 1;
+        root = root.right;
+      }
+    }
+
+    return level;
+  }
+
+  isBalanced(){
+
+  }
+
+  rebalance(){
+
+  }
 }
