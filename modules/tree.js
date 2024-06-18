@@ -100,4 +100,44 @@ export class Tree{
 
     return result;
   }
+
+  inOrder(callback = x => x,root = this.root){
+    return this._inOrderRec(callback,root);
+  }
+
+  _inOrderRec(callback,root,result = []){
+    if(root !== null){
+      this._inOrderRec(callback,root.left,result);
+      result.push(callback(root));
+      this._inOrderRec(callback,root.right,result);
+      return result;
+    }
+  }
+
+  preOrder(callback = x => x,root = this.root){
+    return this._preOrderRec(callback,root);
+  }
+
+  _preOrderRec(callback,root,result = []){
+    if(root !== null){
+      result.push(callback(root));
+      this._preOrderRec(callback,root.left,result);
+      this._preOrderRec(callback,root.right,result);
+      return result;
+    }
+  }
+
+  postOrder(callback = x => x,root = this.root){
+    return this._postOrderRec(callback,root);
+  }
+
+  _postOrderRec(callback,root,result = []){
+    if(root !== null){
+      this._postOrderRec(callback,root.left,result);
+      this._postOrderRec(callback,root.right,result);
+      result.push(callback(root));
+      return result;
+    }
+  }
+
 }
