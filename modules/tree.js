@@ -6,6 +6,19 @@ export class Tree{
     this.root = buildTree(array);
   }
 
+  prettyPrint(node = this.root, prefix = "", isLeft = true){
+    if (node === null) {
+      return;
+    }
+    if (node.right !== null) {
+      this.prettyPrint(node.right, `${prefix}${isLeft ? "│   " : "    "}`, false);
+    }
+    console.log(`${prefix}${isLeft ? "└── " : "┌── "}${node.data}`);
+    if (node.left !== null) {
+      this.prettyPrint(node.left, `${prefix}${isLeft ? "    " : "│   "}`, true);
+    }
+  }
+
   insert(key,root = this.root){
     if(root === null){
       return new Node(key);
@@ -56,5 +69,15 @@ export class Tree{
     }
 
     return minValue;
+  }
+
+  find(value,root = this.root){
+    if(value < root.data){
+      return this.find(value,root.left);
+    } else if(value > root.data){
+      return this.find(value,root.right);
+    } else {
+      return root;
+    }
   }
 }
