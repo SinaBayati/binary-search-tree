@@ -183,6 +183,14 @@ export class Tree{
   }
 
   rebalance(){
+    if(this.root === null){
+      return;
+    }
 
+    // inOrder function returns nodes in an array so we send
+    // the bellow callback to receive only the data
+    // in nodes as an array
+    const currentArr = this.inOrder((x) => x.data);
+    this.root = buildTree(currentArr);
   }
 }
