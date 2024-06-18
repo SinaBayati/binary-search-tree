@@ -1,16 +1,26 @@
 import { Tree } from "./modules/tree.js";
 
-const T = new Tree([1, 7, 4, 23, 8, 9, 4, 3, 5, 7, 9, 67, 6345, 324]);
-// T.insert(69);
-T.insert(10000);
-// T.deleteItem(67);
-T.rebalance()
-T.prettyPrint();
-// console.log(T.find(69));
+// driver script
+const binaryTree = new Tree([1,10,24,38,41,55,69,73,88,96]);
 
-// console.log(T.levelOrder((x) => x.data));
-// console.log(T.inOrder((x) => x.data));
-// console.log(T.preOrder((x) => x.data));
-// console.log(T.postOrder((x) => x.data));
-// console.log(T.height());
-// console.log(T.isBalanced());
+console.log(binaryTree.isBalanced());
+
+console.log(binaryTree.levelOrder());
+console.log(binaryTree.preOrder());
+console.log(binaryTree.postOrder());
+console.log(binaryTree.inOrder());
+
+binaryTree.insert(104);
+binaryTree.insert(420);
+binaryTree.insert(1001);
+
+console.log(binaryTree.isBalanced());
+
+binaryTree.rebalance();
+
+console.log(binaryTree.isBalanced());
+
+console.log(binaryTree.levelOrder());
+console.log(binaryTree.preOrder());
+console.log(binaryTree.postOrder());
+console.log(binaryTree.inOrder());
