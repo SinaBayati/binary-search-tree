@@ -140,4 +140,12 @@ export class Tree{
     }
   }
 
+  height(root = this.root){
+    if(root === null){
+      return -1;
+    }
+    const leftHeight = this.height(root.left);
+    const rightHeight = this.height(root.right);
+    return Math.max(leftHeight,rightHeight) + 1;
+  }
 }
